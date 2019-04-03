@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6C37E42-5536-49F0-B614-7510FD1D911F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WEBACA2</RootNamespace>
+    <AssemblyName>WEBACA2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LittleShopperManagement\ViewSubBrand.aspx" />
+    <Content Include="LittleShopperManagement\ADMViewSubCategory.aspx" />
+    <Content Include="LittleShopperManagement\ADMViewBrand.aspx" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\MyStyle.css" />
+    <Content Include="images\backgroundTop.png" />
+    <Content Include="images\backImage.png" />
+    <Content Include="images\bg_black.png" />
+    <Content Include="images\bg_blackhover.png" />
+    <Content Include="images\bg_blackhover_horizontal.png" />
+    <Content Include="images\bg_blackpressed.png" />
+    <Content Include="images\bg_blackpressed_horizontal.png" />
+    <Content Include="images\bg_black_horizontal.png" />
+    <Content Include="images\bg_blueenergy.png" />
+    <Content Include="images\bg_darkblue.png" />
+    <Content Include="images\bg_darkbluehover.png" />
+    <Content Include="images\bg_darkbluepressed.png" />
+    <Content Include="images\bin.png" />
+    <Content Include="images\blackbackground.png" />
+    <Content Include="images\black_gradient.png" />
+    <Content Include="images\check_black.png" />
+    <Content Include="images\check_blue.png" />
+    <Content Include="images\check_blue_indeterminate.png" />
+    <Content Include="images\check_disabled.png" />
+    <Content Include="images\check_indeterminate_black.png" />
+    <Content Include="images\check_indeterminate_disabled.png" />
+    <Content Include="images\check_indeterminate_white.png" />
+    <Content Include="images\check_lightblue.png" />
+    <Content Include="images\check_lightblue_indeterminate.png" />
+    <Content Include="images\check_white.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\close_black.png" />
+    <Content Include="images\close_blue.png" />
+    <Content Include="images\close_white.png" />
+    <Content Include="images\crosshair-white.png" />
+    <Content Include="images\crosshair.png" />
+    <Content Include="images\darkred_gradient.png" />
+    <Content Include="images\drag.png" />
+    <Content Include="images\dragcancel.png" />
+    <Content Include="images\error.png" />
+    <Content Include="images\filter.png" />
+    <Content Include="images\html_editor.png" />
+    <Content Include="images\html_editor_white.png" />
+    <Content Include="images\icon-calendar-white.png" />
+    <Content Include="images\icon-calendar.png" />
+    <Content Include="images\icon-cancel-white.png" />
+    <Content Include="images\icon-cancel.png" />
+    <Content Include="images\icon-delete-white.png" />
+    <Content Include="images\icon-delete.png" />
+    <Content Include="images\icon-down-blue.png" />
+    <Content Include="images\icon-down-transparent.png" />
+    <Content Include="images\icon-down-white.png" />
+    <Content Include="images\icon-down.png" />
+    <Content Include="images\icon-edit-white.png" />
+    <Content Include="images\icon-edit.png" />
+    <Content Include="images\icon-first-blue.png" />
+    <Content Include="images\icon-first-transparent.png" />
+    <Content Include="images\icon-first-white.png" />
+    <Content Include="images\icon-first.png" />
+    <Content Include="images\icon-last-blue.png" />
+    <Content Include="images\icon-last-transparent.png" />
+    <Content Include="images\icon-last-white.png" />
+    <Content Include="images\icon-last.png" />
+    <Content Include="images\icon-left-blue.png" />
+    <Content Include="images\icon-left-transparent.png" />
+    <Content Include="images\icon-left-white.png" />
+    <Content Include="images\icon-left.png" />
+    <Content Include="images\icon-menu-minimized-white.png" />
+    <Content Include="images\icon-menu-minimized.png" />
+    <Content Include="images\icon-recurrence-exception-white.png" />
+    <Content Include="images\icon-recurrence-exception.png" />
+    <Content Include="images\icon-recurrence-white.png" />
+    <Content Include="images\icon-recurrence.png" />
+    <Content Include="images\icon-right-blue.png" />
+    <Content Include="images\icon-right-transparent.png" />
+    <Content Include="images\icon-right-white.png" />
+    <Content Include="images\icon-right.png" />
+    <Content Include="images\icon-save-white.png" />
+    <Content Include="images\icon-save.png" />
+    <Content Include="images\icon-showpassword-white.png" />
+    <Content Include="images\icon-showpassword.png" />
+    <Content Include="images\icon-time-white.png" />
+    <Content Include="images\icon-time.png" />
+    <Content Include="images\icon-up-blue.png" />
+    <Content Include="images\icon-up-transparent.png" />
+    <Content Include="images\icon-up-white.png" />
+    <Content Include="images\icon-up.png" />
+    <Content Include="images\info.png" />
+    <Content Include="images\loader-small.gif" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\mail.png" />
+    <Content Include="images\menubutton.png" />
+    <Content Include="images\metro-icon-down-white.png" />
+    <Content Include="images\metro-icon-down.png" />
+    <Content Include="images\metro-icon-first-white.png" />
+    <Content Include="images\metro-icon-first.png" />
+    <Content Include="images\metro-icon-last-white.png" />
+    <Content Include="images\metro-icon-last.png" />
+    <Content Include="images\metro-icon-left-white.png" />
+    <Content Include="images\metro-icon-left.png" />
+    <Content Include="images\metro-icon-right - Copy.png" />
+    <Content Include="images\metro-icon-right-white.png" />
+    <Content Include="images\metro-icon-right.png" />
+    <Content Include="images\metro-icon-up-white.png" />
+    <Content Include="images\metro-icon-up.png" />
+    <Content Include="images\multi-arrow.gif" />
+    <Content Include="images\office-icon-down.png" />
+    <Content Include="images\office-icon-first.png" />
+    <Content Include="images\office-icon-last.png" />
+    <Content Include="images\office-icon-left.png" />
+    <Content Include="images\office-icon-right.png" />
+    <Content Include="images\office-icon-up.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\plus_white.png" />
+    <Content Include="images\pointer.png" />
+    <Content Include="images\rangebar_classic.png" />
+    <Content Include="images\rangebar_darkblue.png" />
+    <Content Include="images\rangebar_shinyblack.png" />
+    <Content Include="images\rangebar_summer.png" />
+    <Content Include="images\recurrence-exception.png" />
+    <Content Include="images\recurrence.png" />
+    <Content Include="images\red_arrow_down.png" />
+    <Content Include="images\red_arrow_up.png" />
+    <Content Include="images\red_gradient.png" />
+    <Content Include="images\roundbg_check_black.png" />
+    <Content Include="images\roundbg_check_disabled.png" />
+    <Content Include="images\roundbg_check_indeterminate.png" />
+    <Content Include="images\roundbg_check_white.png" />
+    <Content Include="images\roundbg_classic_hover.png" />
+    <Content Include="images\roundbg_classic_normal.png" />
+    <Content Include="images\roundbg_disabled.png" />
+    <Content Include="images\search.png" />
+    <Content Include="images\search_white.png" />
+    <Content Include="images\sortasc.png" />
+    <Content Include="images\sortascbutton.png" />
+    <Content Include="images\sortdesc.png" />
+    <Content Include="images\sortdescbutton.png" />
+    <Content Include="images\sortremove.png" />
+    <Content Include="images\star.png" />
+    <Content Include="images\star_disabled.png" />
+    <Content Include="images\star_hover.png" />
+    <Content Include="images\success.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\time.png" />
+    <Content Include="images\track_classic.png" />
+    <Content Include="images\track_darkblue.png" />
+    <Content Include="images\track_shinyblack.png" />
+    <Content Include="images\track_summer.png" />
+    <Content Include="images\warning.png" />
+    <Content Include="images\wp_check_indeterminate_white.png" />
+    <Content Include="images\wp_check_white.png" />
+    <Content Include="LittleShopperManagement\ADMAddOneAgeGroup.aspx" />
+    <Content Include="LittleShopperManagement\ADMGetAllAgeGroup.aspx" />
+    <Content Include="LittleShopperManagement\ADMViewProduct.aspx" />
+    <Content Include="LittleShopperManagement\TestingPlatform.aspx" />
+    <Content Include="LittleShopperManagement\UpdateOneProduct.aspx" />
+    <Content Include="Scripts\fileinput.js" />
+    <Content Include="Scripts\fileinput.min.js" />
+    <Content Include="Scripts\fileinput_locale_bg.js" />
+    <Content Include="Scripts\fileinput_locale_cz.js" />
+    <Content Include="Scripts\fileinput_locale_de.js" />
+    <Content Include="Scripts\fileinput_locale_el.js" />
+    <Content Include="Scripts\fileinput_locale_es.js" />
+    <Content Include="Scripts\fileinput_locale_fa.js" />
+    <Content Include="Scripts\fileinput_locale_fr.js" />
+    <Content Include="Scripts\fileinput_locale_hu.js" />
+    <Content Include="Scripts\fileinput_locale_it.js" />
+    <Content Include="Scripts\fileinput_locale_LANG.js" />
+    <Content Include="Scripts\fileinput_locale_nl.js" />
+    <Content Include="Scripts\fileinput_locale_pl.js" />
+    <Content Include="Scripts\fileinput_locale_pt-BR.js" />
+    <Content Include="Scripts\fileinput_locale_pt.js" />
+    <Content Include="Scripts\fileinput_locale_ro.js" />
+    <Content Include="Scripts\fileinput_locale_ru.js" />
+    <Content Include="Scripts\fileinput_locale_sk.js" />
+    <Content Include="Scripts\fileinput_locale_sr.js" />
+    <Content Include="Scripts\fileinput_locale_th.js" />
+    <Content Include="Scripts\fileinput_locale_tr.js" />
+    <Content Include="Scripts\fileinput_locale_uk.js" />
+    <Content Include="Scripts\fileinput_locale_zh.js" />
+    <Content Include="Scripts\jqxbuttons.js" />
+    <Content Include="Scripts\jqxcheckbox.js" />
+    <Content Include="Scripts\jqxcore.js" />
+    <Content Include="Scripts\jqxpanel.js" />
+    <Content Include="Scripts\jqxscrollbar.js" />
+    <Content Include="Scripts\jqxtree.js" />
+    <Content Include="Scripts\jqxwindow.js" />
+    <Content Include="Style\bootstrap-theme.css" />
+    <Content Include="Style\bootstrap-theme.min.css" />
+    <Content Include="Style\bootstrap.css" />
+    <Content Include="Style\bootstrap.min.css" />
+    <Content Include="Style\fileinput.css" />
+    <Content Include="Style\fileinput.min.css" />
+    <Content Include="Style\images\backgroundTop.png" />
+    <Content Include="Style\images\backImage.png" />
+    <Content Include="Style\images\bg_black.png" />
+    <Content Include="Style\images\bg_blackhover.png" />
+    <Content Include="Style\images\bg_blackhover_horizontal.png" />
+    <Content Include="Style\images\bg_blackpressed.png" />
+    <Content Include="Style\images\bg_blackpressed_horizontal.png" />
+    <Content Include="Style\images\bg_black_horizontal.png" />
+    <Content Include="Style\images\bg_blueenergy.png" />
+    <Content Include="Style\images\bg_darkblue.png" />
+    <Content Include="Style\images\bg_darkbluehover.png" />
+    <Content Include="Style\images\bg_darkbluepressed.png" />
+    <Content Include="Style\images\bin.png" />
+    <Content Include="Style\images\blackbackground.png" />
+    <Content Include="Style\images\black_gradient.png" />
+    <Content Include="Style\images\check_black.png" />
+    <Content Include="Style\images\check_blue.png" />
+    <Content Include="Style\images\check_blue_indeterminate.png" />
+    <Content Include="Style\images\check_disabled.png" />
+    <Content Include="Style\images\check_indeterminate_black.png" />
+    <Content Include="Style\images\check_indeterminate_disabled.png" />
+    <Content Include="Style\images\check_indeterminate_white.png" />
+    <Content Include="Style\images\check_lightblue.png" />
+    <Content Include="Style\images\check_lightblue_indeterminate.png" />
+    <Content Include="Style\images\check_white.png" />
+    <Content Include="Style\images\close.png" />
+    <Content Include="Style\images\close_black.png" />
+    <Content Include="Style\images\close_blue.png" />
+    <Content Include="Style\images\close_white.png" />
+    <Content Include="Style\images\crosshair-white.png" />
+    <Content Include="Style\images\crosshair.png" />
+    <Content Include="Style\images\darkred_gradient.png" />
+    <Content Include="Style\images\drag.png" />
+    <Content Include="Style\images\dragcancel.png" />
+    <Content Include="Style\images\error.png" />
+    <Content Include="Style\images\filter.png" />
+    <Content Include="Style\images\html_editor.png" />
+    <Content Include="Style\images\html_editor_white.png" />
+    <Content Include="Style\images\icon-calendar-white.png" />
+    <Content Include="Style\images\icon-calendar.png" />
+    <Content Include="Style\images\icon-cancel-white.png" />
+    <Content Include="Style\images\icon-cancel.png" />
+    <Content Include="Style\images\icon-delete-white.png" />
+    <Content Include="Style\images\icon-delete.png" />
+    <Content Include="Style\images\icon-down-blue.png" />
+    <Content Include="Style\images\icon-down-transparent.png" />
+    <Content Include="Style\images\icon-down-white.png" />
+    <Content Include="Style\images\icon-down.png" />
+    <Content Include="Style\images\icon-edit-white.png" />
+    <Content Include="Style\images\icon-edit.png" />
+    <Content Include="Style\images\icon-first-blue.png" />
+    <Content Include="Style\images\icon-first-transparent.png" />
+    <Content Include="Style\images\icon-first-white.png" />
+    <Content Include="Style\images\icon-first.png" />
+    <Content Include="Style\images\icon-last-blue.png" />
+    <Content Include="Style\images\icon-last-transparent.png" />
+    <Content Include="Style\images\icon-last-white.png" />
+    <Content Include="Style\images\icon-last.png" />
+    <Content Include="Style\images\icon-left-blue.png" />
+    <Content Include="Style\images\icon-left-transparent.png" />
+    <Content Include="Style\images\icon-left-white.png" />
+    <Content Include="Style\images\icon-left.png" />
+    <Content Include="Style\images\icon-menu-minimized-white.png" />
+    <Content Include="Style\images\icon-menu-minimized.png" />
+    <Content Include="Style\images\icon-recurrence-exception-white.png" />
+    <Content Include="Style\images\icon-recurrence-exception.png" />
+    <Content Include="Style\images\icon-recurrence-white.png" />
+    <Content Include="Style\images\icon-recurrence.png" />
+    <Content Include="Style\images\icon-right-blue.png" />
+    <Content Include="Style\images\icon-right-transparent.png" />
+    <Content Include="Style\images\icon-right-white.png" />
+    <Content Include="Style\images\icon-right.png" />
+    <Content Include="Style\images\icon-save-white.png" />
+    <Content Include="Style\images\icon-save.png" />
+    <Content Include="Style\images\icon-showpassword-white.png" />
+    <Content Include="Style\images\icon-showpassword.png" />
+    <Content Include="Style\images\icon-time-white.png" />
+    <Content Include="Style\images\icon-time.png" />
+    <Content Include="Style\images\icon-up-blue.png" />
+    <Content Include="Style\images\icon-up-transparent.png" />
+    <Content Include="Style\images\icon-up-white.png" />
+    <Content Include="Style\images\icon-up.png" />
+    <Content Include="Style\images\info.png" />
+    <Content Include="Style\images\loader-small.gif" />
+    <Content Include="Style\images\loader.gif" />
+    <Content Include="Style\images\mail.png" />
+    <Content Include="Style\images\menubutton.png" />
+    <Content Include="Style\images\metro-icon-down-white.png" />
+    <Content Include="Style\images\metro-icon-down.png" />
+    <Content Include="Style\images\metro-icon-first-white.png" />
+    <Content Include="Style\images\metro-icon-first.png" />
+    <Content Include="Style\images\metro-icon-last-white.png" />
+    <Content Include="Style\images\metro-icon-last.png" />
+    <Content Include="Style\images\metro-icon-left-white.png" />
+    <Content Include="Style\images\metro-icon-left.png" />
+    <Content Include="Style\images\metro-icon-right - Copy.png" />
+    <Content Include="Style\images\metro-icon-right-white.png" />
+    <Content Include="Style\images\metro-icon-right.png" />
+    <Content Include="Style\images\metro-icon-up-white.png" />
+    <Content Include="Style\images\metro-icon-up.png" />
+    <Content Include="Style\images\multi-arrow.gif" />
+    <Content Include="Style\images\office-icon-down.png" />
+    <Content Include="Style\images\office-icon-first.png" />
+    <Content Include="Style\images\office-icon-last.png" />
+    <Content Include="Style\images\office-icon-left.png" />
+    <Content Include="Style\images\office-icon-right.png" />
+    <Content Include="Style\images\office-icon-up.png" />
+    <Content Include="Style\images\plus.png" />
+    <Content Include="Style\images\plus_white.png" />
+    <Content Include="Style\images\pointer.png" />
+    <Content Include="Style\images\rangebar_classic.png" />
+    <Content Include="Style\images\rangebar_darkblue.png" />
+    <Content Include="Style\images\rangebar_shinyblack.png" />
+    <Content Include="Style\images\rangebar_summer.png" />
+    <Content Include="Style\images\recurrence-exception.png" />
+    <Content Include="Style\images\recurrence.png" />
+    <Content Include="Style\images\red_arrow_down.png" />
+    <Content Include="Style\images\red_arrow_up.png" />
+    <Content Include="Style\images\red_gradient.png" />
+    <Content Include="Style\images\roundbg_check_black.png" />
+    <Content Include="Style\images\roundbg_check_disabled.png" />
+    <Content Include="Style\images\roundbg_check_indeterminate.png" />
+    <Content Include="Style\images\roundbg_check_white.png" />
+    <Content Include="Style\images\roundbg_classic_hover.png" />
+    <Content Include="Style\images\roundbg_classic_normal.png" />
+    <Content Include="Style\images\roundbg_disabled.png" />
+    <Content Include="Style\images\search.png" />
+    <Content Include="Style\images\search_white.png" />
+    <Content Include="Style\images\sortasc.png" />
+    <Content Include="Style\images\sortascbutton.png" />
+    <Content Include="Style\images\sortdesc.png" />
+    <Content Include="Style\images\sortdescbutton.png" />
+    <Content Include="Style\images\sortremove.png" />
+    <Content Include="Style\images\star.png" />
+    <Content Include="Style\images\star_disabled.png" />
+    <Content Include="Style\images\star_hover.png" />
+    <Content Include="Style\images\success.png" />
+    <Content Include="Style\images\tick.png" />
+    <Content Include="Style\images\time.png" />
+    <Content Include="Style\images\track_classic.png" />
+    <Content Include="Style\images\track_darkblue.png" />
+    <Content Include="Style\images\track_shinyblack.png" />
+    <Content Include="Style\images\track_summer.png" />
+    <Content Include="Style\images\warning.png" />
+    <Content Include="Style\images\wp_check_indeterminate_white.png" />
+    <Content Include="Style\images\wp_check_white.png" />
+    <Content Include="Style\jqx.base.css" />
+    <Content Include="Style\jqx.bootstrap.css" />
+    <Content Include="Style\MyStyle.css" />
+    <Content Include="Style\pure-min.css" />
+    <Content Include="Style\themes\base\accordion.css" />
+    <Content Include="Style\themes\base\all.css" />
+    <Content Include="Style\themes\base\autocomplete.css" />
+    <Content Include="Style\themes\base\base.css" />
+    <Content Include="Style\themes\base\button.css" />
+    <Content Include="Style\themes\base\core.css" />
+    <Content Include="Style\themes\base\datepicker.css" />
+    <Content Include="Style\themes\base\dialog.css" />
+    <Content Include="Style\themes\base\draggable.css" />
+    <Content Include="Style\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Style\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Style\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Style\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Style\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Style\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Style\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Style\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Style\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Style\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Style\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Style\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Style\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Style\themes\base\menu.css" />
+    <Content Include="Style\themes\base\progressbar.css" />
+    <Content Include="Style\themes\base\resizable.css" />
+    <Content Include="Style\themes\base\selectable.css" />
+    <Content Include="Style\themes\base\selectmenu.css" />
+    <Content Include="Style\themes\base\slider.css" />
+    <Content Include="Style\themes\base\sortable.css" />
+    <Content Include="Style\themes\base\spinner.css" />
+    <Content Include="Style\themes\base\tabs.css" />
+    <Content Include="Style\themes\base\theme.css" />
+    <Content Include="Style\themes\base\tooltip.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Icon.png" />
+    <Content Include="LittleShopperManagement\UpdateSubBrand.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Style\bootstrap-theme.css.map" />
+    <Content Include="Style\bootstrap.css.map" />
+    <Content Include="LittleShopperManagement\AddSubBrandPhoto_Handler.ashx" />
+    <Content Include="LittleShopperManagement\AddBrandPhoto_Handler.ashx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="LittleShopperManagement\GetSubBrandPhoto_Handler.ashx" />
+    <Content Include="LittleShopperManagement\DeleteSubBrandPhoto_Handler.ashx" />
+    <Content Include="LittleShopperManagement\UpdateSubBrandPhoto_Handler.ashx" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="LittleShopperManagement\AddProductImage_Handler.ashx" />
+    <Content Include="LittleShopperManagement\UpdateOneBrandImage.ashx" />
+    <Content Include="LittleShopperManagement\DeleteBrandImage.ashx" />
+    <Content Include="LittleShopperManagement\GetOneBrandPhoto.ashx" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="LittleShopperManagement\DeleteProductPhoto_Handler.ashx" />
+    <Content Include="LittleShopperManagement\UpdateProductPhoto_Handler.ashx" />
+    <Content Include="LittleShopperManagement\GetOneProductPhoto.ashx" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\notify.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="LittleShopperManagement\ViewCategory.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LittleShopperManagement\ViewSubBrand.aspx.cs">
+      <DependentUpon>ViewSubBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ViewSubBrand.aspx.designer.cs">
+      <DependentUpon>ViewSubBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMViewSubCategory.aspx.cs">
+      <DependentUpon>ADMViewSubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMViewSubCategory.aspx.designer.cs">
+      <DependentUpon>ADMViewSubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMViewBrand.aspx.cs">
+      <DependentUpon>ADMViewBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMViewBrand.aspx.designer.cs">
+      <DependentUpon>ADMViewBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes2\AgeGroup.cs" />
+    <Compile Include="Classes2\AgeGroupManager.cs" />
+    <Compile Include="Classes2\Brand.cs" />
+    <Compile Include="Classes2\BrandImage.cs" />
+    <Compile Include="Classes2\BrandManager.cs" />
+    <Compile Include="Classes2\Category.cs" />
+    <Compile Include="Classes2\CategoryManager.cs" />
+    <Compile Include="Classes2\DbConnection.cs" />
+    <Compile Include="Classes2\Product.cs" />
+    <Compile Include="Classes2\ProductImage.cs" />
+    <Compile Include="Classes2\ProductManager.cs" />
+    <Compile Include="Classes2\SubCategoryManager.cs" />
+    <Compile Include="Classes\Brand.cs" />
+    <Compile Include="Classes\BrandManager.cs" />
+    <Compile Include="Classes\Category.cs" />
+    <Compile Include="Classes\CategoryManager.cs" />
+    <Compile Include="Classes\DbConnection.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ProductImage.cs" />
+    <Compile Include="Classes\ProductManager.cs" />
+    <Compile Include="Classes\SubBrand.cs" />
+    <Compile Include="Classes\SubBrandImage.cs" />
+    <Compile Include="Classes\SubBrandManager.cs" />
+    <Compile Include="Classes\SubCategory.cs" />
+    <Compile Include="Classes\SubCategoryManager.cs" />
+    <Compile Include="LittleShopperManagement\AddBrandPhoto_Handler.ashx.cs">
+      <DependentUpon>AddBrandPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\AddProductImage_Handler.ashx.cs">
+      <DependentUpon>AddProductImage_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\AddSubBrandPhoto_Handler.ashx.cs">
+      <DependentUpon>AddSubBrandPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMAddOneAgeGroup.aspx.cs">
+      <DependentUpon>ADMAddOneAgeGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMAddOneAgeGroup.aspx.designer.cs">
+      <DependentUpon>ADMAddOneAgeGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMGetAllAgeGroup.aspx.cs">
+      <DependentUpon>ADMGetAllAgeGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMGetAllAgeGroup.aspx.designer.cs">
+      <DependentUpon>ADMGetAllAgeGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMViewProduct.aspx.cs">
+      <DependentUpon>ADMViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ADMViewProduct.aspx.designer.cs">
+      <DependentUpon>ADMViewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\DeleteBrandImage.ashx.cs">
+      <DependentUpon>DeleteBrandImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\DeleteProductPhoto_Handler.ashx.cs">
+      <DependentUpon>DeleteProductPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\DeleteSubBrandPhoto_Handler.ashx.cs">
+      <DependentUpon>DeleteSubBrandPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\GetOneBrandPhoto.ashx.cs">
+      <DependentUpon>GetOneBrandPhoto.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\GetOneProductPhoto.ashx.cs">
+      <DependentUpon>GetOneProductPhoto.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\GetSubBrandPhoto_Handler.ashx.cs">
+      <DependentUpon>GetSubBrandPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\TestingPlatform.aspx.cs">
+      <DependentUpon>TestingPlatform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\TestingPlatform.aspx.designer.cs">
+      <DependentUpon>TestingPlatform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateOneBrandImage.ashx.cs">
+      <DependentUpon>UpdateOneBrandImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateOneProduct.aspx.cs">
+      <DependentUpon>UpdateOneProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateOneProduct.aspx.designer.cs">
+      <DependentUpon>UpdateOneProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateProductPhoto_Handler.ashx.cs">
+      <DependentUpon>UpdateProductPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateSubBrand.aspx.cs">
+      <DependentUpon>UpdateSubBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateSubBrand.aspx.designer.cs">
+      <DependentUpon>UpdateSubBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LittleShopperManagement\UpdateSubBrandPhoto_Handler.ashx.cs">
+      <DependentUpon>UpdateSubBrandPhoto_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LittleShopperManagement\ViewCategory.aspx.cs">
+      <DependentUpon>ViewCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LittleShopperManagement\ViewCategory.aspx.designer.cs">
+      <DependentUpon>ViewCategory.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Style\images\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="changes\" />
+    <Folder Include="Content\bootstrap-fileinput\img\" />
+    <Folder Include="Content\themes\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18348</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18348/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
